@@ -1,0 +1,65 @@
+﻿<div class="cs-wrapper">
+    <ion-header-bar class="">
+        <h2 class="title">
+           <form class="searchBarInput ng-pristine ng-valid">
+                <span class="item item-input spanSearchBar">
+                    <i class="icon ion-search placeholder-icon"></i>
+                    <i ng-hide="searchStr==''" class="icon ion-close-circled placeholder-icon searchClear" ng-click="clearSearch()"></i>
+                    <input placeholder="Search Administrators" type="search" ng-model="searchStr" ng-change="search()">
+                </span>
+            </form
+        </h2>
+
+        <a href="" class="admin-add-button button-icon icon ion-android-add" ng-click="addAdmin()"></a>
+    </ion-header-bar>
+</div>
+<ion-header-bar align-title="left" class="bar-subheader admin-subheader">
+    <div style="" class="tabBar">
+        <a style="" ng-class="{'active':currentActiveStatus===enums.AdminActive.All}" ng-click="activeFilter(enums.AdminActive.All)">All</a>
+        <a style="" ng-class="{'active':currentActiveStatus===enums.AdminActive.Active}" ng-click="activeFilter(enums.AdminActive.Active)">Active</a>
+        <a style="" ng-class="{'active':currentActiveStatus===enums.AdminActive.InActive}" ng-click="activeFilter(enums.AdminActive.InActive)">Inactive</a>
+    </div>
+</ion-header-bar>
+<ion-view>
+    <style>
+        .item-complex .item-content {
+            padding:16px;
+            width:100%;
+        }
+        .roleEnabled {
+        float:left;
+        }
+        .itemInfo {
+            float:left;
+        }
+    </style>
+    <ion-content>
+        <ion-list style="" class="adminList disable-user-behavior" show-delete="false" can-swipe="true" swipe-direction="both">
+            <div class="list" ng-repeat="item in resultList">
+                    <ion-item  class="item" style="" ng-click="viewAdmin($event,item)" side="right" on-swipe-left="onSwipeLeft(item)" on-swipe-right="onSwipeRight(item)">
+
+                        <div class="roleEnabled">
+                            <span class="ion-person" ng-hide="admin.Photo"></span>
+                            <img id="adminPic" ng-show="admin.Photo" name="adminPic" class="ion-person" ng-src="admin.PhotoData" style="max-height:32px;max-width:32px" />
+                        </div>
+                        <div class="itemInfo">
+                            <h2>
+                                <span ng-bind-html="item.ForeName | csdTextHighlight : searchStr"></span>
+                                &nbsp;
+                                <span ng-bind-html="item.LastName | csdTextHighlight : searchStr"></span>
+                            </h2>
+                            <p class="subtitle">{{item.Email}}</p>
+                        </div>
+                        <p class="right subtitle twoLineHeight" ng-hide="item.isShowDelete"><span class="ion-chevron-right listChevron"></span></p>
+
+                        <ion-option-button class="button-assertive icon ion-trash-a" ng-click="deleteAdmin($event, item, $index)"></ion-option-button>
+
+                        <!--<p class="right subtitle twoLineHeight" ng-show="item.isShowDelete" ng-click="deleteAdmin($event, item, $index)">
+                            <span class="ion-ios-minus listChevron" style="color:red;font-size:18px" />
+                        </p>-->
+                    </ion-item>
+            </div>
+        </ion-list>
+    </ion-content>
+</ion-view>
+

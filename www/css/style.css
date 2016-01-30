@@ -1,0 +1,245 @@
+/* Empty. Add your own CSS if you like */
+.right{
+	float:right;
+}
+.cs-wrapper .bar{
+	position:static;
+}
+.cs-wrapper .bar.bar-header{
+	border-top:none;
+	background-color:#72c9c3;
+	position:absolute;
+}
+.cs-wrapper .mainContent{
+	position:relative; 
+	top:42px;
+}
+.cs-wrapper .scrollContent{
+	position:absolute;
+	top:40px;
+	width:100%;
+	overflow-x: hidden;
+    overflow-y: scroll;
+}
+.cs-wrapper .bar.bar-header .title{
+	color:#fff;
+}
+.cs-wrapper .bar.bar-header a.button{
+	color:#fff;	
+}
+.cs-wrapper .bar .button.button-icon{
+	font-size:14px;
+}
+.cs-wrapper h2 .bar.bar-header a.button{
+	color:#fff;	
+}
+.cs-wrapper h2 form.searchBarInput{
+	margin-top:5px;
+}
+.cs-wrapper h2 form.searchBarInput label.item-input{
+	width:200px;
+	margin:0 auto;
+}
+
+
+
+.adminList .ion-person{
+	font-size:32px;
+	margin-right:15px;
+}
+
+.adminList .item>div{
+	float:left;
+}
+.adminList .roleEnabled{
+	color:#72c9c3;
+}
+.adminList .roleDisabled{
+	color:#ddd;
+}
+.adminList .subtitle{
+	color:#999;
+}
+.adminList p.twoLineHeight{
+	line-height:40px;
+	vertical-align:middle;
+}
+.adminList .listChevron{
+	color:#72c9c3;
+	margin-left:15px;
+	cursor:pointer;
+}
+.adminList .item{
+	border-left:none;
+	border-right:none;
+}
+.adminList .item:hover{
+	background-color: #eee;
+}
+.adminList .item h2 em{
+	color:#f99006;
+}
+.tabBar{
+	position:absolute;
+	top:0;
+	width:100%;
+	z-index:99;
+}
+.tabBar a{
+	color:#333;
+	padding:10px 20px 11px 20px;
+	line-height:40px;
+	cursor:pointer;
+}
+/*.tabBar a:hover{
+	background-color:#eee;
+}*/
+.tabBar a.active{
+	color:#73c8c5;
+}
+ion-content.grey-background{
+	background-color:#eee;
+}
+label.warning span.input-label{
+	color:#e50000;
+}
+
+form .item-toggle span,form label span.input-label{
+	color:#999;
+}
+form label.item input::-moz-placeholder{
+	color:#333;
+}
+form label.item input::-webkit-input-placeholder{
+	color:#ddd;
+}
+form .item-toggle .toggle{
+	left:35%;
+	margin-left:5px;
+}
+form.searchBarInput{
+	width:100%;
+}
+form.searchBarInput label.item-input{
+	border-radius:15px;
+	width:80%;
+	padding:0 0 0 15px;
+}
+
+form.searchBarInput label.item{
+	background-color:#78aab3;
+	font-size:14px;
+	border:none;
+}
+form.searchBarInput label.item i{
+	font-size:16px;
+}
+form.searchBarInput label.item i.placeholder-icon{
+	color:#ddd;	
+}
+form.searchBarInput label.item input{
+	color:#fff;
+	height:30px;
+}
+form.searchBarInput label.item input::-moz-placeholder{
+	color:#ddd;
+}
+form.searchBarInput label.item input::-webkit-input-placeholder{
+	color:#ddd;
+}
+form.searchBarInput label.item i.right{
+	position:absolute;
+	right:10px;
+	top:5px;
+}
+form.searchBarInput .button-cancel{
+	position:absolute;
+	right:15px;
+	top:5px;
+}
+form.searchBarInput .button-icon{
+	color:#fff;
+}
+
+.admin-subheader{
+    margin:0px;
+    padding:0px;
+    border-bottom:1px solid #ddd;
+}
+
+.admin-add-button{
+    color:#fff;
+    position:absolute;
+    right:10px;
+    top:3px;
+}
+
+.adminList{
+    margin:0px;
+    padding:0px;
+}
+
+.list{
+    margin:0px;
+    padding:0px;
+}
+
+.search-text-highlight {
+    color: #f99006;
+    font-style: normal;
+}
+
+
+.cs-wrapper h2 form.searchBarInput span.item-input{
+	width:200px;
+	margin:0 auto;
+}
+span.warning span.input-label{
+	color:#e50000;
+}
+form label span.input-label{
+	color:#999;
+}
+form span.item input::-moz-placeholder{
+	color:#333;
+}
+form span.item input::-webkit-input-placeholder{
+	color:#ddd;
+}
+form.searchBarInput span.item-input{
+	border-radius:15px;
+	width:80%;
+	padding:0 0 0 15px;
+}
+
+form.searchBarInput span.item{
+	background-color:#78aab3;
+	font-size:14px;
+	border:none;
+}
+form.searchBarInput span.item i{
+	font-size:16px;
+}
+form.searchBarInput span.item i.placeholder-icon{
+	color:#ddd;	
+}
+form.searchBarInput span.item input{
+	color:#fff;
+	height:30px;
+}
+form.searchBarInput span.item input::-moz-placeholder{
+	color:#ddd;
+}
+form.searchBarInput span.item input::-webkit-input-placeholder{
+	color:#ddd;
+}
+form.searchBarInput span.item i.searchClear{
+	position:absolute;
+	right:10px;
+	top:-7px;
+}
+
+
+.spanSearchBar{
+    height:30px;
+}

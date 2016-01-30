@@ -1,0 +1,51 @@
+﻿<ion-view style="" title="New Administrator" hide-nav-bar="true" class="cs-wrapper">
+    <ion-content class="no-header grey-background" overflow-scroll="false">
+        <div class="bar bar-header">
+            <a href="" ng-click="goBack()" class="button button-icon icon ion-android-arrow-back"></a>
+            <h2 class="title">
+                {{EditAdminTitle}}
+            </h2>
+            <a href="" ng-click="save()" ng-disabled="hasFirstNameError() || hasLastNameError() || hasEmailError()" 
+               class="button button-icon icon ion-android-done"></a>
+        </div>
+
+        <div class="mainContent">
+            <div style="padding-top:35px" class="list">
+                <ion-toggle style="" toggle-class="toggle toggle-positive disable-user-behavior" ng-model="admin.IsActive">Active Status</ion-toggle>
+            </div>
+
+            <div style="padding-top:20px" class="list">
+                <label style="" class="item item-input">
+                    <span class="input-label">First Name</span>
+                    <input name="txtForeName" type="text" ng-model="admin.ForeName" ng-keydown="isForeNameChanged = true;" />
+                    <div style="position:absolute; right:10px;margin-top:20px">
+                        <span style="color:red; font-size:x-small" ng-show="isForeNameChanged && hasFirstNameError()">First name is required.</span>
+                    </div>
+                </label>
+                <label style="" class="item item-input">
+                    <span class="input-label">Last Name</span>
+                    <input name="txtLastName" type="text" ng-model="admin.LastName" ng-keydown="isLastNameChanged = true;" />
+                    <div style="position:absolute; right:10px;margin-top:20px">
+                        <span style="color:red; font-size:x-small" ng-show="isLastNameChanged && hasLastNameError()">Last name is required.</span>
+                    </div>
+                </label>
+                <label style="" class="item item-input">
+                    <span class="input-label">Email Address</span>
+                    <input name="txtEmail" type="email" ng-model="admin.Email" ng-keydown="isEmailChanged = true;" />
+                    <div style="position:absolute; right:10px;margin-top:20px">
+                        <span style="color:red; font-size:x-small" ng-show="isEmailChanged && hasEmailError()">Email is not valid.</span>
+                    </div>
+                </label>
+            </div>
+
+            <!--<div style="padding-top:35px;" class="list">
+                <label style="" class="item item-input">
+                    <span class="input-label">Photo</span>
+                    <ion
+                    <img id="adminPic" name="adminPic" class="ion-person" style="max-height:150px;max-width:150px" ng-click="capturePhoto()" />
+                </label>
+            </div>-->
+        </div>
+    </ion-content>
+</ion-view>
+

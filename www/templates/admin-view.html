@@ -1,0 +1,46 @@
+﻿<ion-view style="" title="Patient Name" hide-nav-bar="true" class="cs-wrapper">
+    <ion-content class="no-header grey-background" overflow-scroll="false">
+        <div class="bar bar-header">
+            <a href="" class="button button-icon icon ion-android-arrow-back" ng-click="goToList()"></a>
+            <h2 class="title">
+                {{admin.ForeName}} {{admin.LastName}}
+            </h2>
+            <a href="" class="button button-icon icon ion-compose" ng-click="editAdmin(admin)"></a>
+        </div>
+
+        <div class="mainContent">
+            <form style="padding-top:35px" class="list">
+                <label style="" class="item item-input">
+                    <span class="input-label">Active Status</span>
+                    <span>{{admin.IsActiveString}}</span>
+                </label>
+            </form>
+
+            <form style="padding-top:20px;" class="list">
+                <label style="" class="item item-input">
+                    <span class="input-label">First Name</span>
+                    <span>{{admin.ForeName}}</span>
+                </label>
+                <label style="" class="item item-input">
+                    <span class="input-label">Last Name</span>
+                    <span>{{admin.LastName}}</span>
+                </label>
+                <label style="" class="item item-input">
+                    <span class="input-label">Email Address</span>
+                    <span>{{admin.Email}}</span>
+                </label>
+            </form>
+
+            <form style="padding-top:20px" class="list">
+                <label style="" class="item item-input">
+                    <span class="input-label">Created</span>
+                    <span ui-date ui-date-format="mm/dd/yyyy" >{{admin.RecordCreated | date:'yyyy-MM-dd HH:mm'}}</span>
+                </label>
+                <label style="" class="item item-input">
+                    <span class="input-label">Last Updated</span>
+                    <span ui-date ui-date-format="mm/dd/yyyy" >{{admin.RecordLastUpdated | date:'yyyy-MM-dd HH:mm'}}</span>
+                </label>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>
